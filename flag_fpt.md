@@ -3,16 +3,16 @@ bash
 ```bash
 # ==========================================
 # PENTEST FTP
-# ALVO: 34.227.11.18
+# ALVO: <ip_alvo>
 # PORTA: 21
 # ==========================================
 
 # 1. Identificar a porta e versão do serviço
-nmap -sV -p 21 34.227.11.18
+nmap -sV -p 21 <ip_alvo>
 
 
 # 2. Conectar ao servidor FTP
-ftp 34.227.11.18
+ftp <ip_alvo>
 
 
 # 3. Testar login
