@@ -31,7 +31,7 @@ http://<ip_alvo>/cgi-bin/tracertool.cgi
 
 # Usuário identificado: summer
 
-ssh summer@IP_DO_ALVO
+ssh summer@IP_DO_ALVO -p <porta> (default 22222)
 
 # Senha: winter
 
