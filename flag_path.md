@@ -11,52 +11,56 @@ bash
 gobuster version
 
 
-# 2. Realizar enumeração de diretórios
+# 2. Enumerar diretórios e arquivos
 gobuster dir \
 -u http://<ip_alvo>/ \
 -w /usr/share/dirb/wordlists/common.txt
 
 
 # ==========================================
-# RESULTADOS ENCONTRADOS
+# 3. RESULTADOS ENCONTRADOS
 # ==========================================
 
-# Acesso proibido (403)
+# 403 - Acesso proibido
 # .hta
 # .htaccess
 # .htpasswd
 # cgi-bin/
 # server-status
 
-# Redirecionamento (301)
+# 301 - Redirecionamento
 # passwords/
 
-# Acesso permitido (200)
+# 200 - Acesso permitido
 # index.html
 # robots.txt
 
 
 # ==========================================
-# ANÁLISE DOS RESULTADOS
+# 4. ACESSAR O DIRETÓRIO PASSWORDS
 # ==========================================
 
-# 403 - Acesso proibido
-# 301 - Redirecionamento
-# 200 - Requisição realizada com sucesso
-
-
-# ==========================================
-# CONCLUSÃO
-# ==========================================
-
-# Foram identificados 8 caminhos no servidor web.
-# O diretório /passwords/ merece análise adicional.
-# Os arquivos index.html e robots.txt estão acessíveis.
+# IMPORTANTE:
+# Após identificar o caminho /passwords/,
+# ACESSE O LINK NO NAVEGADOR.
 #
-# RECOMENDAÇÃO:
-# Revisar permissões e restringir o acesso
-# a diretórios e arquivos que contenham
-# informações sensíveis.
+# Clique em:
+# http://<ip_alvo>/passwords/
+#
+# Verifique o conteúdo disponível no diretório
+# para procurar a flag do desafio.
+
+
+# ==========================================
+# 5. CONCLUSÃO
+# ==========================================
+
+# O Gobuster identificou o diretório /passwords/.
+# Esse diretório deve ser acessado e analisado
+# para verificar se contém a flag do desafio.
+#
+# A identificação do diretório não confirma,
+# por si só, que a flag está presente.
 #
 # ==========================================
 ```
